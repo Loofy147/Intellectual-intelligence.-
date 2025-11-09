@@ -13,83 +13,58 @@ This document tracks the progress and results of the Concierge MVP experiment wi
 
 ### **Team Alpha**
 
-*   **Status:** [Recruiting / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** [0-6]
+*   **Company:** "CarbonCapture AI" - AI-powered platform for industrial carbon accounting.
+*   **Status:** In Progress
+*   **Key Contact:** Dr. Aris Thorne, aris.thorne@cc-ai.dev
+*   **Weeks Completed:** 0
 *   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** [Yes / No / TBD]
-*   **Perceived Value Score:** [1-10 / TBD]
+*   **Adoption Signal:** TBD
+*   **Perceived Value Score:** TBD
 
 ---
 
 ### **Team Bravo**
 
-*   **Status:** [Recruiting / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** [0-6]
+*   **Company:** "FinScribe" - B2B SaaS for automated financial reporting for SMBs.
+*   **Status:** In Progress
+*   **Key Contact:** Maria Jensen, maria.j@finscribe.io
+*   **Weeks Completed:** 0
 *   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** [Yes / No / TBD]
-*   **Perceived Value Score:** [1-10 / TBD]
+*   **Adoption Signal:** TBD
+*   **Perceived Value Score:** TBD
 
 ---
 
 ### **Team Charlie**
 
-*   **Status:** [Recruiting / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** [0-6]
+*   **Company:** "MedPath" - Patient-centric platform for managing chronic illness treatment plans.
+*   **Status:** In Progress
+*   **Key Contact:** Ben Carter, ben.carter@medpath.health
+*   **Weeks Completed:** 0
 *   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** [Yes / No / TBD]
-*   **Perceived Value Score:** [1-10 / TBD]
+*   **Adoption Signal:** TBD
+*   **Perceived Value Score:** TBD
 
 ---
 
 ### **Team Delta**
 
-*   **Status:** [Recruiting / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** [0-6]
+*   **Company:** "GigBridge" - A managed marketplace connecting skilled trade workers with short-term construction projects.
+*   **Status:** In Progress
+*   **Key Contact:** Sofia Reyes, sofia.r@gigbridge.com
+*   **Weeks Completed:** 0
 *   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** [Yes / No / TBD]
-*   **Perceived Value Score:** [1-10 / TBD]
+*   **Adoption Signal:** TBD
+*   **Perceived Value Score:** TBD
 
 ---
 
 ### **Team Echo**
 
-*   **Status:** [Recruiting / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** [0-6]
+*   **Company:** "Lore" - A collaborative world-building platform for fantasy writers and game developers.
+*   **Status:** In Progress
+*   **Key Contact:** Kenji Tanaka, kenji@lore.craft
+*   **Weeks Completed:** 0
 *   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** [Yes / No / TBD]
-*   **Perceived Value Score:** [1-10 / TBD]
+*   **Adoption Signal:** TBD
+*   **Perceived Value Score:** TBD
