@@ -13,13 +13,12 @@ This document tracks the progress and results of the Concierge MVP experiment wi
 
 ### **Team Alpha**
 
-*   **Company:** "CarbonCapture AI" - AI-powered platform for industrial carbon accounting.
+*   **Company:** InnovateCorp AI - AI-powered platform for enterprise workflow automation.
 *   **Status:** In Progress
-*   **Key Contact:** Dr. Aris Thorne, aris.thorne@cc-ai.dev
-*   **Weeks Completed:** 2
+*   **Key Contact:** Jane Doe, jane.doe@innovatecorp.ai
+*   **Weeks Completed:** 0
 *   **Notes:**
-    *   Week 1: Great first session. Team is highly engaged and technical.
-    *   Week 2: The "Pre-Mortem" exercise was a major breakthrough.
+    *   Week 1:
     *   Week 2:
     *   Week 3:
     *   Week 4:
