@@ -1,10 +1,26 @@
 import argparse
 from scripts.utils import read_md_with_yaml
 import re
+import os
+
+def find_latest_compass_file(team_name, weeks_completed):
+    """
+    Finds the path to the most recent compass.json file for a given team.
+    """
+    compass_dir = "experiments/compass_files/"
+
+    # Iterate backwards from the current week to find the latest file
+    for week in range(weeks_completed, 0, -1):
+        expected_filename = f"{team_name.lower()}_week_{week}.json"
+        filepath = os.path.join(compass_dir, expected_filename)
+        if os.path.exists(filepath):
+            return filepath
+
+    return "N/A - No compass file found for previous weeks."
 
 def main():
     """
-    Main execution loop for the new, robust session_prep script.
+    Main execution loop for the V4 session_prep script with automated file retrieval.
     """
     parser = argparse.ArgumentParser(
         description="Generate a pre-session briefing for a facilitation session."
@@ -17,7 +33,7 @@ def main():
     )
     args = parser.parse_args()
 
-    print(f"--- Archon Prime Session Prep V2: Team {args.team} ---")
+    print(f"--- Archon Prime Session Prep V4: Team {args.team} ---")
 
     tracking_file = "experiments/01_EXPERIMENT_TRACKING.md"
     data, content = read_md_with_yaml(tracking_file)
@@ -36,14 +52,15 @@ def main():
     company = team_data.get('company_name', 'N/A')
     weeks_completed = int(team_data.get('weeks_completed', 0))
 
+    # Find the latest compass file automatically
+    latest_compass_path = find_latest_compass_file(args.team, weeks_completed)
+
     # Extract last week's insight from the Markdown content
     last_weeks_insight = "N/A (First Session)"
-    # Find the markdown section for the specific team
     team_notes_regex = re.compile(rf"### .*?Team {re.escape(args.team)}.*?\n(.*?)(?=\n---|\Z)", re.DOTALL | re.IGNORECASE)
     notes_match = team_notes_regex.search(content)
     if notes_match:
         notes_section = notes_match.group(1)
-        # Find all "Week X: ..." notes that are not placeholders
         weekly_notes = re.findall(r"Week\s\d+:\s*(?!\[Notes for)(.+)", notes_section)
         if weekly_notes:
             last_weeks_insight = weekly_notes[-1].strip()
@@ -54,6 +71,7 @@ def main():
     print("="*50)
     print(f"SESSION BRIEFING: Team {args.team} ({company}) - Week {weeks_completed + 1}")
     print("="*50)
+    print(f"Last Compass File: {latest_compass_path}")
     print(f"Last Week's Key Insight: {last_weeks_insight}")
     print(f"Facilitator Goal for Today: {facilitator_goal}")
     print("="*50)

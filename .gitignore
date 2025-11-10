@@ -7,3 +7,7 @@ __pycache__/
 
 # Ignore prospector output files
 prospects_*.csv
+
+# Ignore Google API credentials and tokens
+token.json
+credentials.json
