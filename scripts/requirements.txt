@@ -1,3 +1,5 @@
 # Required Python packages for Archon Prime scripts
 python-dotenv
 requests
+PyYAML
+pytest

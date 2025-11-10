@@ -125,43 +125,32 @@ def add_to_pipeline_prompt(csv_filename):
             print("Invalid selection. Please enter space-separated numbers.")
             return
 
-    # Read the pipeline file
+    # Read the pipeline file using our robust utility
     pipeline_file = "experiments/00_RECRUITMENT_PIPELINE.md"
-    try:
-        with open(pipeline_file, 'r') as f:
-            lines = f.readlines()
-    except FileNotFoundError:
-        print(f"Error: Could not find {pipeline_file}")
+    data, content = read_md_with_yaml(pipeline_file)
+
+    if data is None:
+        print(f"Error: Could not read or parse {pipeline_file}")
         return
 
-    # Find the line index right after the LEADS table header
-    try:
-        header_index = next(i for i, line in enumerate(lines) if "LEADS" in line)
-        # We insert after the header and the separator line, so +2
-        insert_index = header_index + 2
-    except StopIteration:
-        print("Error: Could not find the LEADS section in the pipeline file.")
-        return
-
-    # Construct the new lines to insert
-    new_lines = []
+    # Add the selected prospects to the data structure
+    added_count = 0
     for i in selected_indices:
         if 0 <= i < len(prospects):
             p = prospects[i]
-            # Format: | [CompanyName](URL) | ContactPerson, Title | Identified | Notes |
-            new_line = f"| [{p['CompanyName']}]({p['URL']}) | {p['ContactPerson']}, CEO | Identified | From prospector run. |\n"
-            new_lines.append(new_line)
+            new_prospect = {
+                "company_name": p['CompanyName'],
+                "url": p['URL'],
+                "contact_person": p['ContactPerson'],
+                "status": "Identified",
+                "notes": "Added from prospector run."
+            }
+            data.setdefault('prospects', []).append(new_prospect)
+            added_count += 1
 
-    # Insert the new lines into the file content
-    lines[insert_index:insert_index] = new_lines
-
-    # Write the updated content back to the file
-    try:
-        with open(pipeline_file, 'w') as f:
-            f.writelines(lines)
-        print(f"\nSuccessfully added {len(new_lines)} prospect(s) to {pipeline_file}")
-    except IOError as e:
-        print(f"Error writing to {pipeline_file}: {e}")
+    # Write the updated data structure back to the file
+    if write_md_with_yaml(pipeline_file, data, content):
+        print(f"\nSuccessfully added {added_count} prospect(s) to {pipeline_file}")
 
 
 if __name__ == "__main__":
