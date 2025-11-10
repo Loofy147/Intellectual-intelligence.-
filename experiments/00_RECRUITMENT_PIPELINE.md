@@ -1,10 +1,36 @@
+---
+prospects:
+  - company_name: InnovateCorp AI
+    url: https://innovatecorp.ai
+    contact_person: Jane Doe, CEO
+    status: Committed
+    notes: Onboarding email sent on 2025-11-12. Assigned to Team Alpha.
+  - company_name: CogniFlow
+    url: https://cogniflow.ai
+    contact_person: Chris Taylor, Founder
+    status: Contacted
+    notes: Emailed on 2025-11-11. Personalized line about a recent article they published on contract law.
+  - company_name: EchoAI
+    url: https://echoai.dev
+    contact_person: Sophia Rodriguez, CEO
+    status: Contacted
+    notes: Emailed on 2025-11-11. Personalized line referencing their open-source developer tool.
+  - company_name: DataWeave SaaS
+    url: https://dataweave.saas
+    contact_person: John Smith, Founder
+    status: Contacted
+    notes: Emailed on 2025-11-11. Personalized line about their insightful blog post on data visualization.
+  - company_name: ConnectSphere
+    url: https://connectsphere.io
+    contact_person: Sarah Lee, CEO
+    status: Contacted
+    notes: Emailed on 2025-11-11. Personalized line about their unique GTM strategy.
+---
 # Recruitment Pipeline: Concierge MVP V1
 
-This document is the central CRM for tracking our recruitment efforts for the first cohort of the Concierge MVP program.
+This document is the central CRM for tracking our recruitment efforts for the first cohort of the Concierge MVP program. The pipeline data is managed in the YAML frontmatter of this file.
 
 **Goal:** Recruit 5 high-quality, committed teams.
-
----
 
 ## **Target Profile**
 
@@ -13,34 +39,9 @@ This document is the central CRM for tracking our recruitment efforts for the fi
 *   **Team:** Engaged founder or product leader who feels the pain of strategic chaos.
 *   **Domain:** B2B SaaS, Developer Tools, or complex marketplaces.
 
----
+## **Pipeline Status**
 
-## **Pipeline**
+This section is for high-level notes and summaries. The detailed status of each prospect is stored in the YAML frontmatter and is managed by the automation scripts.
 
-| Company | Key Contact | Status | Notes |
-| :--- | :--- | :--- | :--- |
-| **LEADS** | | | |
-| [Company Name] | [Name], [Title] | Identified | [Source: e.g., Twitter, AngelList, personal network] |
-| [Company Name] | [Name], [Title] | Identified | [Source] |
-| [Company Name] | [Name], [Title] | Identified | [Source] |
-| [Company Name] | [Name], [Title] | Identified | [Source] |
-| [Company Name] | [Name], [Title] | Identified | [Source] |
-| | | | |
-| **CONTACTED** | | | |
-| [Company Name] | [Name] | Contacted | Emailed on [Date] using Template 1. |
-| [Company Name] | [Name] | Contacted | Emailed on [Date]. |
-| | | | |
-| **IN DISCUSSION** | | | |
-| [Company Name] | [Name] | Chat Scheduled | Scheduled for [Date/Time]. |
-| [Company Name] | [Name] | Follow-up Sent | Sent follow-up on [Date]. |
-| | | | |
-| **COMMITTED (Cohort 1)** | | | |
-| **1. Team Alpha** | [Name] | **COMMITTED** | Onboarding email sent on [Date]. |
-| **2. Team Bravo** | [Name] | **COMMITTED** | Onboarding email sent on [Date]. |
-| **3. Team Charlie**| [Name] | **COMMITTED** | Onboarding email sent on [Date]. |
-| **4. Team Delta** | [Name] | **COMMITTED** | Onboarding email sent on [Date]. |
-| **5. Team Echo** | [Name] | **COMMITTED** | Onboarding email sent on [Date]. |
-| | | | |
-| **DECLINED / NOT A FIT** | | | |
-| [Company Name] | [Name] | Declined | Reason: "Too busy right now." |
-| [Company Name] | [Name] | Not a Fit | Reason: "Too early, still in stealth." |
+*   **Current Focus:** Following up with contacted leads.
+*   **Next Steps:** Secure commitments from 4 more teams.

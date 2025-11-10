@@ -1,32 +1,27 @@
-# session_prep.py - Placeholder
-
 import argparse
+from scripts.utils import read_md_with_yaml
+import re
+import os
 
-def show_manual_instructions(team_name):
+def find_latest_compass_file(team_name, weeks_completed):
     """
-    This is a placeholder script. The automatic parsing logic for the
-    experiment tracking file proved to be too brittle.
-
-    Instead, please follow these manual steps for session preparation.
+    Finds the path to the most recent compass.json file for a given team.
     """
+    compass_dir = "experiments/compass_files/"
 
-    tracking_file = "experiments/01_EXPERIMENT_TRACKING.md"
+    # Iterate backwards from the current week to find the latest file
+    for week in range(weeks_completed, 0, -1):
+        expected_filename = f"{team_name.lower()}_week_{week}.json"
+        filepath = os.path.join(compass_dir, expected_filename)
+        if os.path.exists(filepath):
+            return filepath
 
-    print("="*50)
-    print("MANUAL SESSION PREPARATION REQUIRED")
-    print("="*50)
-    print(f"TEAM: {team_name}")
-    print("\nACTION REQUIRED:")
-    print(f"1. Open the tracking file: {tracking_file}")
-    print(f"2. Review the latest notes for 'Team {team_name}'.")
-    print("3. Identify the current week number and facilitator goals.")
-    print("4. Ask the team for their latest 'compass.json' file.")
-    print("\nThis script will be implemented with a more robust parsing")
-    print("method in a future iteration.")
-    print("="*50)
+    return "N/A - No compass file found for previous weeks."
 
-
-if __name__ == "__main__":
+def main():
+    """
+    Main execution loop for the V4 session_prep script with automated file retrieval.
+    """
     parser = argparse.ArgumentParser(
         description="Generate a pre-session briefing for a facilitation session."
     )
@@ -37,4 +32,49 @@ if __name__ == "__main__":
         help="The name of the team to generate the briefing for (e.g., 'Alpha', 'Bravo').",
     )
     args = parser.parse_args()
-    show_manual_instructions(args.team)
+
+    print(f"--- Archon Prime Session Prep V4: Team {args.team} ---")
+
+    tracking_file = "experiments/01_EXPERIMENT_TRACKING.md"
+    data, content = read_md_with_yaml(tracking_file)
+
+    if not data or 'teams' not in data:
+        print("Error: Could not read valid team data from tracking file.")
+        return
+
+    team_data = next((t for t in data['teams'] if t.get('team_name', '').lower() == args.team.lower()), None)
+
+    if not team_data:
+        print(f"Error: Could not find data for 'Team {args.team}' in the YAML frontmatter.")
+        return
+
+    # Extract data from YAML
+    company = team_data.get('company_name', 'N/A')
+    weeks_completed = int(team_data.get('weeks_completed', 0))
+
+    # Find the latest compass file automatically
+    latest_compass_path = find_latest_compass_file(args.team, weeks_completed)
+
+    # Extract last week's insight from the Markdown content
+    last_weeks_insight = "N/A (First Session)"
+    team_notes_regex = re.compile(rf"### .*?Team {re.escape(args.team)}.*?\n(.*?)(?=\n---|\Z)", re.DOTALL | re.IGNORECASE)
+    notes_match = team_notes_regex.search(content)
+    if notes_match:
+        notes_section = notes_match.group(1)
+        weekly_notes = re.findall(r"Week\s\d+:\s*(?!\[Notes for)(.+)", notes_section)
+        if weekly_notes:
+            last_weeks_insight = weekly_notes[-1].strip()
+
+    facilitator_goal = f"Guide them according to the playbook for Week {weeks_completed + 1}"
+
+    # Print the briefing
+    print("="*50)
+    print(f"SESSION BRIEFING: Team {args.team} ({company}) - Week {weeks_completed + 1}")
+    print("="*50)
+    print(f"Last Compass File: {latest_compass_path}")
+    print(f"Last Week's Key Insight: {last_weeks_insight}")
+    print(f"Facilitator Goal for Today: {facilitator_goal}")
+    print("="*50)
+
+if __name__ == "__main__":
+    main()

@@ -22,7 +22,7 @@ Would you be open to a brief 15-minute chat next week to see if this would be a 
 
 Best,
 
-[Your Name]
+Jules
 
 ---
 
@@ -38,12 +38,12 @@ Our goal over the next six weeks is to work together to install a durable, repea
 
 **Here are your next steps:**
 
-1.  **The Tool:** Please take a moment to familiarize yourself with the Pragmatic Compass template, which we will be using in our sessions. You can access it here: [Link to `index.html`]
+1.  **The Tool:** Please take a moment to familiarize yourself with the Pragmatic Compass template, which we will be using in our sessions. You can access it here: [Link to `app/index.html`]
 2.  **How it Works:** The tool is 100% client-side. To save your work, use the "Save as JSON" button. To load it in a future session, use the "Load from JSON" button. Please designate one person as the "owner" of your team's JSON file.
-3.  **Our First Session:** I've sent a separate calendar invitation for our first session on [Date/Time]. We will hit the ground running, so please come prepared to discuss the "Three Questions" at a high level.
+3.  **Our First Session:** I've sent a separate calendar invitation for our first session. We will hit the ground running, so please come prepared to discuss the "Three Questions" at a high level.
 
 I'm incredibly excited to begin this journey with you.
 
 Best,
 
-[Your Name]
+Jules

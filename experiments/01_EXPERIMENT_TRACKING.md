@@ -1,6 +1,15 @@
+---
+teams:
+  - team_name: Alpha
+    company_name: InnovateCorp AI
+    company_description: AI-powered platform for enterprise workflow automation.
+    status: In Progress
+    key_contact: Jane Doe, jane.doe@innovatecorp.ai
+    weeks_completed: 0
+---
 # Concierge MVP Experiment Tracking - Cohort 1
 
-This document tracks the progress and results of the Concierge MVP experiment with the first cohort of five early-stage startup teams.
+This document tracks the progress and results of the Concierge MVP experiment with the first cohort of five early-stage startup teams. The core data for each team is managed in the YAML frontmatter of this file.
 
 ## **Success Signals**
 
@@ -9,93 +18,22 @@ This document tracks the progress and results of the Concierge MVP experiment wi
 
 ---
 
-## **Team Tracking**
+## **Weekly Notes & Observations**
 
-### **Team Alpha**
+### **Team Alpha (InnovateCorp AI)**
 
-*   **Company:** "CarbonCapture AI" - AI-powered platform for industrial carbon accounting.
-*   **Status:** In Progress
-*   **Key Contact:** Dr. Aris Thorne, aris.thorne@cc-ai.dev
-*   **Weeks Completed:** 2
-*   **Notes:**
-    *   Week 1: Great first session. Team is highly engaged and technical.
-    *   Week 2: The "Pre-Mortem" exercise was a major breakthrough.
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
+*   **Week 1:** [Notes for Week 1]
+*   **Week 2:** [Notes for Week 2]
+*   **Week 3:** [Notes for Week 3]
+*   **Week 4:** [Notes for Week 4]
+*   **Week 5:** [Notes for Week 5]
+*   **Week 6:** [Notes for Week 6]
 *   **Adoption Signal:** TBD
 *   **Perceived Value Score:** TBD
 
 ---
-
 ### **Team Bravo**
 
-*   **Company:** [Company Name & One-Liner]
-*   **Status:** [Not Started / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** 0
-*   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** TBD
-*   **Perceived Value Score:** TBD
-
----
-
-### **Team Charlie**
-
-*   **Company:** [Company Name & One-Liner]
-*   **Status:** [Not Started / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** 0
-*   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** TBD
-*   **Perceived Value Score:** TBD
-
----
-
-### **Team Delta**
-
-*   **Company:** [Company Name & One-Liner]
-*   **Status:** [Not Started / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** 0
-*   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** TBD
-*   **Perceived Value Score:** TBD
-
----
-
-### **Team Echo**
-
-*   **Company:** [Company Name & One-Liner]
-*   **Status:** [Not Started / In Progress / Completed]
-*   **Key Contact:** [Name], [Email]
-*   **Weeks Completed:** 0
-*   **Notes:**
-    *   Week 1:
-    *   Week 2:
-    *   Week 3:
-    *   Week 4:
-    *   Week 5:
-    *   Week 6:
-*   **Adoption Signal:** TBD
-*   **Perceived Value Score:** TBD
+*   **Week 1:**
+*   **Week 2:**
+... and so on
