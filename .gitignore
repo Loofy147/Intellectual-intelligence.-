@@ -1,0 +1,9 @@
+# Ignore the .env file containing secret API keys
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore prospector output files
+prospects_*.csv
