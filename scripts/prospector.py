@@ -4,6 +4,7 @@ import requests
 import csv
 from datetime import datetime
 from dotenv import load_dotenv
+from scripts.utils import read_md_with_yaml, write_md_with_yaml
 
 # Load environment variables from .env file
 load_dotenv()
