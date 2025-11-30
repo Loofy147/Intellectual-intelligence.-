@@ -93,7 +93,3 @@ venv.bak/
 archon.db
 server/.env
 *.db
-
-# Node.js
-client/node_modules
-client/.vite

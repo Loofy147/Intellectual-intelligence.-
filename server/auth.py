@@ -47,5 +47,5 @@ def login():
 @jwt_required()
 def profile():
     current_user_id = get_jwt_identity()
-    user = db.session.get(User, current_user_id)
+    user = User.query.get(current_user_id)
     return jsonify({"username": user.username, "email": user.email}), 200

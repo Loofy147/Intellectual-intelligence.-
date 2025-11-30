@@ -1,13 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Archon Prime</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pragmatic Compass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>The Pragmatic Compass</h1>
+        <p>A Framework for Strategic Clarity</p>
+    </header>
+    <main>
+        <section id="three-questions">
+            <h2>The Three Questions</h2>
+            <article>
+                <h3>What is the non-obvious market dislocation we are targeting?</h3>
+                <textarea id="q1" placeholder="Describe the growing gap between people's needs and the current solutions..."></textarea>
+            </article>
+            <article>
+                <h3>What is our asymmetric, defensible advantage (The Moat)?</h3>
+                <textarea id="q2" placeholder="Describe your unique, opinionated workflow and the ecosystem that creates switching costs..."></textarea>
+            </article>
+            <article>
+                <h3>What is the single, greatest, non-technical risk to this plan (The GTM Risk)?</h3>
+                <textarea id="q3" placeholder="Identify the primary barrier to adoption, focusing on behavioral change..."></textarea>
+            </article>
+        </section>
+        <section id="adversarial-check">
+            <h2>The Adversarial Check</h2>
+            <article>
+                <h3>Write the Pre-Mortem headline.</h3>
+                <textarea id="ac1" placeholder="e.g., 'One Year After Launch, 'Archon' is Praised as 'Brilliant' but Scrapped as 'Unusable'...'"></textarea>
+            </article>
+            <article>
+                <h3>Explicitly state the incumbent's and the platform's kill strategy.</h3>
+                <textarea id="ac2" placeholder="Detail the kill strategies of platforms like Atlassian/Microsoft and incumbents like Aha!/Productboard, and your defense against them..."></textarea>
+            </article>
+        </section>
+        <section id="lean-experiment">
+            <h2>The Lean Experiment</h2>
+            <article>
+                <h3>What is the single riskiest assumption in our plan?</h3>
+                <textarea id="le1" placeholder="Identify the core belief that, if wrong, would cause the entire strategy to fail..."></textarea>
+            </article>
+            <article>
+                <h3>What is the cheapest, fastest way to test that assumption?</h3>
+                <textarea id="le2" placeholder="Describe the Concierge MVP, the service, and your 'human backend' process..."></textarea>
+            </article>
+            <article>
+                <h3>What quantifiable signal will prove or disprove the assumption?</h3>
+                <textarea id="le3" placeholder="Define the success signals for adoption and perceived value, including specific metrics (e.g., 3 of 5 teams, 8/10 score)..."></textarea>
+            </article>
+        </section>
+        <section id="actions">
+            <button id="save-btn">Save as JSON</button>
+            <input type="file" id="load-btn" accept=".json" style="display: none;" />
+            <label for="load-btn" class="button">Load from JSON</label>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Archon. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
